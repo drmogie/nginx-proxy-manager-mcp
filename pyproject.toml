@@ -1,0 +1,19 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "nginx-proxy-manager-mcp"
+version = "2026.9.28.1"
+description = "MCP tool that lets Claude read and change Nginx Proxy Manager through its API."
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+authors = [{ name = "drmogie" }]
+dependencies = ["mcp>=1.2,<2"]
+
+[project.scripts]
+nginx-proxy-manager-mcp = "nginx_proxy_manager_mcp:main"
+
+[tool.setuptools]
+packages = ["nginx_proxy_manager_mcp"]
