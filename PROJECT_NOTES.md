@@ -20,5 +20,6 @@
   stdio start check. NOT tested against real NPM or on Windows.
 - Reverse-proxy lesson from the shared GitHub doc: prefer a dedicated
   subdomain over a Custom Location on this NPM.
-- GitHub repo: NOT created yet. Waiting on Mogie for the repo name
-  (suggested: nginx-proxy-manager-mcp).
+- GitHub repo created 2026-09-28: drmogie/nginx-proxy-manager-mcp (no ha- prefix,
+  not a card; "npm" left out of the name to avoid the JavaScript npm).
+  Release 2026.09.28.01 tagged after the push was checked.
