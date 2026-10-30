@@ -6,7 +6,7 @@ Settings come from environment variables only. The password and the login
 token are never written to disk, never printed, and never sent anywhere
 except the NPM server.
 
-  NPM_URL         Example: http://172.16.90.75:81   (required)
+  NPM_URL         Example: http://192.168.1.75:81   (required)
   NPM_EMAIL       Login email of an NPM user        (required)
   NPM_PASSWORD    Password of that user             (required)
   NPM_VERIFY_TLS  "false" to skip TLS checks for a self-signed https URL
@@ -375,7 +375,7 @@ def npm_hosts(
       - create needs `data`. Only the main fields are needed. Sensible
         defaults fill the rest (for proxy-hosts: http, no certificate,
         block_exploits on). Proxy host example:
-        {"domain_names": ["app.example.com"], "forward_host": "172.16.1.5",
+        {"domain_names": ["app.example.com"], "forward_host": "192.168.1.5",
          "forward_port": 8080, "allow_websocket_upgrade": true}
       - update needs `id` and `data` with ONLY the fields to change. The tool
         reads the current item and merges, so nothing else is lost.

@@ -57,7 +57,7 @@ Open the Claude desktop app settings and find the MCP servers config file.
 Add the block from `claude_desktop_config.example.json`.
 Change the address, email, and password.
 
-- `NPM_URL`: your NPM admin address, like `http://172.16.90.75:81`
+- `NPM_URL`: your NPM admin address, like `http://192.168.1.75:81`
 - `NPM_EMAIL`: the login email of the user you made
 - `NPM_PASSWORD`: that user's password
 

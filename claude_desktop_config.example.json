@@ -4,7 +4,7 @@
       "command": "uvx",
       "args": ["--from", "D:\\GitHub-Projects\\nginx-proxy-manager-mcp", "nginx-proxy-manager-mcp"],
       "env": {
-        "NPM_URL": "http://172.16.90.75:81",
+        "NPM_URL": "http://192.168.1.75:81",
         "NPM_EMAIL": "claude@example.com",
         "NPM_PASSWORD": "PUT-THE-PASSWORD-HERE-IN-THIS-FILE-ONLY"
       }

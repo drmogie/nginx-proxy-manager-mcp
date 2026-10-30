@@ -152,7 +152,7 @@ def main():
     check("status counts", r["counts"]["proxy"] == 0, r)
 
     # create needs confirm
-    body = {"domain_names": ["a.mogie.io"], "forward_host": "172.16.1.5", "forward_port": 8080}
+    body = {"domain_names": ["a.example.com"], "forward_host": "192.168.1.5", "forward_port": 8080}
     r = s.npm_hosts("proxy-hosts", "create", data=body)
     check("create without confirm asks", r.get("needs_confirm") is True, r)
     check("create preview has defaults", r["preview"]["block_exploits"] is True, r)
@@ -180,7 +180,7 @@ def main():
     check("update asks first", r.get("needs_confirm") and r["preview"]["changes"]["forward_port"]["to"] == 9090, r)
     r = s.npm_hosts("proxy-hosts", "update", id=1, data={"forward_port": 9090}, confirm=True)
     check("update works (read-only fields stripped)", r["ok"] and DB["hosts"][1]["forward_port"] == 9090, r)
-    check("update kept other fields", DB["hosts"][1]["forward_host"] == "172.16.1.5")
+    check("update kept other fields", DB["hosts"][1]["forward_host"] == "192.168.1.5")
 
     # enable / disable
     r = s.npm_hosts("proxy-hosts", "disable", id=1)
